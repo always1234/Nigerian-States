@@ -1,0 +1,17 @@
+//#region CapitalMapping
+class NigeriaCapital {
+  private statesAndCapitals: { [key: string]: string } = {
+    'Abia': 'Umuahia',
+    'Adamawa': 'Yola',
+    // ... other states
+    'Federal Capital Territory': 'Abuja'
+  };
+
+  public getCapital(state: string): string | undefined {
+    return this.statesAndCapitals[state];
+  }
+}
+
+const nigeriaCapital = new NigeriaCapital();
+console.log('The capital of the Federal Capital Territory is:', nigeriaCapital.getCapital('Federal Capital Territory'));
+//#endregion
